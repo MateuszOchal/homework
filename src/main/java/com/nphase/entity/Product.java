@@ -6,11 +6,20 @@ public class Product {
     private final String name;
     private final BigDecimal pricePerUnit;
     private final int quantity;
+    private String category;
+
 
     public Product(String name, BigDecimal pricePerUnit, int quantity) {
         this.name = name;
         this.pricePerUnit = pricePerUnit;
         this.quantity = quantity;
+    }
+
+    public Product(String name, BigDecimal pricePerUnit, int quantity, String category) {
+        this.name = name;
+        this.pricePerUnit = pricePerUnit;
+        this.quantity = quantity;
+        this.category = category;
     }
 
     public String getName() {
@@ -24,4 +33,6 @@ public class Product {
     public int getQuantity() {
         return quantity;
     }
+
+    public String getCategory() {return category;}
 }
